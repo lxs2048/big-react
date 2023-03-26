@@ -1,0 +1,33 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    // 继承其他eslint配置，有了合集和规则，需要指定合集里的规则到底是打开还是关闭
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier",
+        "plugin:prettier/recommended"
+    ],
+    // parser：我们要用什么样的解析器把js代码解析成AST抽象语法树，默认的tslist没有办法解析ts代码，所以要指定一个社区实现的ts的eslint parser
+    "parser": "@typescript-eslint/parser",
+    // 解析配置
+    "parserOptions": {
+        "ecmaVersion": "latest", //什么版本js代码
+        "sourceType": "module"
+    },
+    // 规则的合集
+    "plugins": [
+        "@typescript-eslint",
+        "prettier"
+    ],
+    // 具体的list的规则
+    "rules": {
+        "prettier/prettier": "error",
+        "no-case-declarations": "off",
+        "no-constant-condition": "off",
+        "@typescript-eslint/ban-ts-comment": "off"
+    }
+}

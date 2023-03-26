@@ -1,0 +1,7 @@
+{
+    "terminal.integrated.fontSize": 12,//terminal字体，截图不全可以放小
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,//保存触发eslint修复
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",//默认格式化工具选项
+}
